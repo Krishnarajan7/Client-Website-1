@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playwrite+CU:wght@100..400&family=Quicksand:wght@300..700&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playwrite+CU:wght@100..400&family=Quicksand:wght@300..700&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playwrite+CU:wght@100..400&family=Quicksand:wght@300..700&family=Satisfy&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Playwrite+CU:wght@100..400&family=Quicksand:wght@300..700&family=Satisfy&display=swap');
+
+
+/* General reset */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  /* font-family: 'Oxygen', sans-serif; */
+}
+
+/* Marquee Section */
+.marque {
+  background-color: #144552;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-text {
+  font-family: "Quicksand", sans-serif;
+  color: #ebe6e0;
+  font-size: large;
+  white-space: nowrap;
+  padding: 8px 16px;
+  position: absolute;
+  animation: scroll-left 20s linear infinite;
+}
+
+.marquee-text b {
+  color: #c9a227;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(250%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Navbar Section */
+.navbar {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  margin-left: 60px;
+  width: 110px;
+}
+
+.logo-name {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 10px;
+  flex-direction: column;
+}
+
+.logo-name p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 40px;
+}
+
+.clothin {
+  margin-top: -10px;
+  color: #c9a227;
+}
+
+/* Text with Glittering Effect */
+@keyframes glitter-slide {
+  0% {
+    background-position: -200%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+.logo-name p {
+  font-family: "Oxygen", sans-serif;
+  display: inline-block;
+  background: linear-gradient(90deg, #c9a227, #144552, #ebe6e0, #c9a227);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitter-slide 4s infinite linear;
+}
+
+@font-face {
+  font-family: 'Breathney';
+  src: url('/src/Fonts/Breathney\ Demo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clothin a {
+  font-family: 'Breathney', sans-serif;
+  font-size: 30px;
+}
+
+.forms {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+
+.btns {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  font-family: "Open-sans", sans-serif;
+  font-size: larger;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #c9a227;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btns:hover {
+  transition: 1s ease-in-out;
+  background: transparent;
+}
+
+.btns:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btns span {
+  color: #144552;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.forms i {
+  margin-right: 4px;
+}
+
+
+/* Navigation Links */
+.nav-links {
+  font-family: "Merienda", cursive;
+  list-style: none;
+  display: flex;
+  margin-left: 300px;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #144552;
+  font-weight: 350;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links li a i {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.nav-links .active {
+  background: linear-gradient(120deg, #c9a227, #144552, #ebe6e0, #c9a227);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitter-slide 5s infinite linear;
+}
+
+.nav-links li a:hover {
+  color: #c9a227;
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes glitter-slide {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+
+
+/* Media Queries */
+/* Mobile View (max-width: 768px) */
+
+@media (max-width: 1024px) {
+  .nav-links {
+    font-family: "Merienda", cursive;
+    list-style: none;
+    display: flex;
+    margin-left: 50px;
+    gap: 20px;
+    font-size: small;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .logo img {
+    margin-left: 10px;
+    width: 100px;
+  }
+
+  .logo-name {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 0px;
+    flex-direction: column;
+  }
+
+  .clothins a {
+    font-size: 35px;
+  }
+
+  .clothin a {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex;
+    padding: 0px 20px;
+    gap: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logo img {
+    width: 85px;
+    margin-left: 20px;
+  }
+
+
+  .clothins a {
+    font-size: 28px;
+  }
+
+  .clothin a {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    /* Show hamburger icon on mobile */
+  }
+
+  /* Hamburger & Nav links transition */
+  .nav-links {
+    display: none;
+    /* Hidden until hamburger is clicked */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .marquee-text {
+    font-size: small;
+    animation-duration: 5ms;
+  }
+
+  .photo {
+    display: none;
+  }
+}
+
+/* Add styles for hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: auto;
+  margin-right: 20px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #144552;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+
+/* Make the hamburger icon visible on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #144552;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+
+  .nav-links li a {
+    color: #ebe6e0;
+    font-size: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .marquee-text {
+    font-family: "Quicksand", sans-serif;
+    color: #ebe6e0;
+    animation: scroll-left 10s linear infinite;
+  }
+
+
+  /* Animations for hamburger menu */
+  .hamburger.active .bar:nth-child(1) {
+    background-color: #c9a227;
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    background-color: #c9a227;
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/*------Next part----*/
+
+
+.products-banner {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  /* Ensures no overflow of the image */
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Sends the image behind the content */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the entire container */
+}
+
+.content {
+  z-index: 1;
+  /* Brings the content above the image */
+}
+
+.products-banner h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.products-banner p {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.products-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Overlay to darken image for text readability */
+  z-index: 1;
+}
+
+
+.products-banner h1 {
+  font-size: 48px;
+  font-family: "Breathney", cursive;
+  color: #c9a227;
+  margin-bottom: 10px;
+}
+
+.products-banner p {
+  font-size: 18px;
+  font-family: "Oxygen", sans-serif;
+}
+
+.products-banner h1,
+.products-banner p {
+  position: relative;
+  z-index: 2;
+  /* Ensure the text appears above the overlay */
+}

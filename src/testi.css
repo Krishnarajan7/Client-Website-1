@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playwrite+CU:wght@100..400&family=Quicksand:wght@300..700&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playwrite+CU:wght@100..400&family=Quicksand:wght@300..700&family=Satisfy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playwrite+CU:wght@100..400&family=Quicksand:wght@300..700&family=Satisfy&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Playwrite+CU:wght@100..400&family=Quicksand:wght@300..700&family=Satisfy&display=swap');
+
+
+/* General reset */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Oxygen', sans-serif; */
+}
+
+/* Marquee Section */
+.marque {
+  background-color: #144552;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-text {
+  font-family: "Quicksand", sans-serif;
+  color: #ebe6e0;
+  font-size: large;
+  white-space: nowrap;
+  padding: 8px 16px;
+  position: absolute;
+  animation: scroll-left 20s linear infinite;
+}
+
+.marquee-text b {
+  color: #c9a227;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(250%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Navbar Section */
+.navbar {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  margin-left: 60px;
+  width: 110px;
+}
+
+.logo-name {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 10px;
+  flex-direction: column;
+}
+
+.logo-name p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 40px;
+}
+
+.clothin {
+  margin-top: -10px;
+  color: #c9a227;
+}
+
+/* Text with Glittering Effect */
+@keyframes glitter-slide {
+  0% {
+    background-position: -200%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+.logo-name p {
+  font-family: "Oxygen", sans-serif;
+  display: inline-block;
+  background: linear-gradient(90deg, #c9a227, #144552, #ebe6e0, #c9a227);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitter-slide 4s infinite linear;
+}
+
+@font-face {
+  font-family: 'Breathney';
+  src: url('/src/Fonts/Breathney\ Demo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clothin a {
+  font-family: 'Breathney', sans-serif;
+  font-size: 30px;
+}
+
+
+/* Navigation Links */
+.nav-links {
+  font-family: "Merienda", cursive;
+  list-style: none;
+  display: flex;
+  margin-left: 380px;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #144552;
+  font-weight: 350;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links li a i {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.nav-links .active {
+  background: linear-gradient(120deg, #c9a227, #144552, #ebe6e0, #c9a227);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitter-slide 5s infinite linear;
+}
+
+.nav-links li a:hover {
+  color: #c9a227;
+  transform: scale(1.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes glitter-slide {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+/* Media Queries */
+/* Mobile View (max-width: 768px) */
+
+@media (max-width: 1024px) {
+  .nav-links {
+    font-family: "Merienda", cursive;
+    list-style: none;
+    display: flex;
+    margin-left: 50px;
+    gap: 20px;
+    font-size: small;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .logo img {
+    margin-left: 10px;
+    width: 100px;
+  }
+
+  .logo-name {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 0px;
+    flex-direction: column;
+  }
+
+  .clothins a {
+    font-size: 35px;
+  }
+
+  .clothin a {
+    font-size: 25px;
+  }
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex;
+    padding: 0px 20px;
+    gap: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logo img {
+    width: 85px;
+    margin-left: 20px;
+  }
+
+  .logo-name p {
+    margin-left: -10px;
+    font-size: 28px;
+  }
+
+  .clothin a {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    /* Show hamburger icon on mobile */
+  }
+
+  /* Hamburger & Nav links transition */
+  .nav-links {
+    display: none;
+    /* Hidden until hamburger is clicked */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .marquee-text {
+    font-size: small;
+    animation-duration: 5ms;
+  }
+}
+
+/* Add styles for hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: auto;
+  margin-right: 20px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #144552;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Make the hamburger icon visible on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #144552;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+
+  .nav-links li a {
+    color: #ebe6e0;
+    font-size: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .marquee-text {
+    font-family: "Quicksand", sans-serif;
+    color: #ebe6e0;
+    animation: scroll-left 10s linear infinite;
+  }
+
+
+  /* Animations for hamburger menu */
+  .hamburger.active .bar:nth-child(1) {
+    background-color: #c9a227;
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    background-color: #c9a227;
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/*clients section and map */
+/* General Styles */
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+  
+  gap: 30px;
+}
+
+.testimonial {
+  display: flex;
+  width: 45%;
+  background-color: #144552;
+  color: #ebe6e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.testimonial-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.testimonial-text {
+  padding: 20px;
+  font-family: 'Oxygen', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-text p {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-text h4 {
+  font-size: 18px;
+  color: #c9a227;
+  text-align: right;
+  margin: 0;
+}
+
+/* Left and Right Styling */
+.testimonial.left {
+  align-self: flex-start;
+}
+
+.testimonial.right {
+  align-self: flex-end;
+}
+
+/* Hover Effects */
+.testimonial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+  }
+
+  .testimonial {
+    width: 100%;
+  }
+
+  .testimonial.left,
+  .testimonial.right {
+    align-self: center;
+  }
+}
+
+
+.map-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.map-section h2 {
+  color: #c9a227;
+  font-family: "Breathney", cursive;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.map-container iframe {
+  width: 80%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 35%;
+  margin-bottom: 50px;
+  width: 30%;
+  background-color: #144552;
+  color: #ebe6e0;
+  border-radius: 10px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code img {
+  width: 200px;
+  height: auto;
+}
+
+.qr-code p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-family: "Oxygen", sans-serif;
+  color: #c9a227;
+}
+
+/* Media Query for mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .map-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .qr-code {
+    width: 80%;
+    margin-left: 10%;
+    /* Make QR code section fill most of the screen */
+    padding: 20px;
+    box-shadow: none;
+  }
+
+  .qr-code img {
+    width: 150px;
+    /* Adjust QR code image size */
+  }
+
+  .qr-code p {
+    font-size: 16px;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 300px;
+    /* Adjust map size */
+  }
+}
+
+/* Media Query for tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .qr-code {
+    width: 60%;
+    margin-left: 20%;
+    /* Adjust the QR code section for tablets */
+  }
+
+  .qr-code img {
+    width: 180px;
+  }
+
+  .map-container iframe {
+    width: 90%;
+    height: 350px;
+  }
+}
+
+/* Existing styles for other sections */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .contact-us-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+  }
+}
+
+footer {
+
+  margin-top: 100px;
+  text-align: center;
+  font-family: "Oxygen", sans-serif;
+  padding: 20px;
+  background-color: #144552;
+  color: white;
+}
